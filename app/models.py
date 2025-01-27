@@ -5,7 +5,7 @@ from uuid import UUID
 class Category:
     def __init__(self, id: UUID, parent_id: UUID, name: str):
         self.id = id
-        self.parent_id = id
+        self.parent_id = parent_id
         self.name = name
 
 
