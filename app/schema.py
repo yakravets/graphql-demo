@@ -38,5 +38,4 @@ type_defs = """
     }
 """
 
-# Створення схеми
 schema = make_executable_schema(type_defs, [query, mutation])
