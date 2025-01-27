@@ -2,7 +2,6 @@ from ariadne import make_executable_schema
 from app.queries.query import query
 from app.mutations.mutation import mutation
 
-# Опис схеми GraphQL
 type_defs = """
     type Product {
         id: ID!
@@ -28,7 +27,14 @@ type_defs = """
     }
     
     type Mutation {
-        createProduct(name: String!, code: String!, description: String!, price: Float!, images: [String]!, category_id: ID!): Product
+        createProduct(
+            name: String!, 
+            code: String!, 
+            description: String!, 
+            price: Float!, 
+            images: [String]!, 
+            category_id: ID!
+        ): Product
     }
 """
 
