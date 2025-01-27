@@ -19,11 +19,22 @@ class Product:
         self.images = images
         self.category = category
 
-# Демонстраційні дані для категорій і товарів
 categories = [
-    Category(id=UUID("6b9f2b66-1989-447f-88fd-5fffc63817b6"), name="Electronics", parent_id=UUID("00000000-0000-0000-0000-000000000000")),
-    Category(id=UUID("15cb8d80-cfc6-4a61-ba95-bf73dfc91c7e"), name="Iphone", parent_id=UUID('6b9f2b66-1989-447f-88fd-5fffc63817b6')),
-    Category(id=UUID("c7a4a669-5369-4ada-9d7d-d92de814e77c"), name="Ipad", parent_id=UUID("6b9f2b66-1989-447f-88fd-5fffc63817b6"))
+    Category(
+        id=UUID("6b9f2b66-1989-447f-88fd-5fffc63817b6"),
+        name="Electronics",
+        parent_id=UUID("00000000-0000-0000-0000-000000000000")
+    ),
+    Category(
+        id=UUID("15cb8d80-cfc6-4a61-ba95-bf73dfc91c7e"),
+        name="Iphone",
+        parent_id=UUID('6b9f2b66-1989-447f-88fd-5fffc63817b6')
+    ),
+    Category(
+        id=UUID("c7a4a669-5369-4ada-9d7d-d92de814e77c"),
+        name="Ipad",
+        parent_id=UUID("6b9f2b66-1989-447f-88fd-5fffc63817b6")
+    )
 ]
 
 products = [

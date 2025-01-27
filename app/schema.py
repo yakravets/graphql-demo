@@ -1,5 +1,6 @@
 from ariadne import make_executable_schema
-from .resolvers import query
+from app.queries.query import query
+from app.mutations.mutation import mutation
 
 # Опис схеми GraphQL
 type_defs = """
@@ -25,7 +26,11 @@ type_defs = """
         categories: [Category]!
         categoryById(id: ID!): Category
     }
+    
+    type Mutation {
+        createProduct(name: String!, code: String!, description: String!, price: Float!, images: [String]!, category_id: ID!): Product
+    }
 """
 
 # Створення схеми
-schema = make_executable_schema(type_defs, query)
+schema = make_executable_schema(type_defs, [query, mutation])
